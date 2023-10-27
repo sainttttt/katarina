@@ -7,7 +7,7 @@
 
 import AudioKit
 import Combine
-//import AudioKitEX
+import AudioKitEX
 import AudioKitUI
 import AVFoundation
 import SwiftUI
@@ -157,7 +157,7 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
         self.silencer = silencer
         mixer.addInput(silencer)
         mew = MeowFader(player)
-        mew.au.meow()
+        mew.au.meow(sound: "baa wooof")
         // cat = mew.avAudioNode.auAudioUnit;
 
         // dog = cat!.fullStateForDocument

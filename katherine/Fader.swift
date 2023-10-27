@@ -1,7 +1,8 @@
 // Copyright AudioKit. All Rights Reserved. Revision History at http://github.com/AudioKit/AudioKit/
 
 import AVFoundation
-//import CAudioKitEX
+import CAudioKitEX
+import AudioKitEX
 
 import AudioKit
 
@@ -45,7 +46,7 @@ public class MeowFader: Node {
     public static let rightGainDef = NodeParameterDef(
         identifier: "rightGain",
         name: "Right Gain",
-        address: akGetP("MeowParameterRightGain"),
+        address: akGetParameterAddress("MeowParameterRightGain"),
         defaultValue: 1,
         range: MeowFader.gainRange,
         unit: .linearGain)
@@ -106,8 +107,6 @@ public class MeowFader: Node {
 
 
     }
-
-
 
 
     deinit {

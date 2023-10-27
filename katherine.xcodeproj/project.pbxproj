@@ -9,15 +9,6 @@
 /* Begin PBXBuildFile section */
 		850EA1BD2A81871F00858A72 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 850EA1BC2A81871F00858A72 /* AudioKit */; };
 		850EA1C32A81874100858A72 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 850EA1C22A81874100858A72 /* AudioKitUI */; };
-		8538B96E2AEB6FA400B7C21B /* DebugDSP.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346A22AE708AC00A4EB9D /* DebugDSP.h */; };
-		8538B9702AEB6FA400B7C21B /* AtomicDataPtr.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346A42AE708AC00A4EB9D /* AtomicDataPtr.h */; };
-		8538B9712AEB6FA400B7C21B /* Interop.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346A52AE708AC00A4EB9D /* Interop.h */; };
-		8538B9722AEB6FA400B7C21B /* SequencerEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346A62AE708AC00A4EB9D /* SequencerEngine.h */; };
-		8538B9732AEB6FA400B7C21B /* BufferedAudioBus.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346A72AE708AC00A4EB9D /* BufferedAudioBus.h */; };
-		8538B9742AEB6FA400B7C21B /* ExceptionCatcher.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346A82AE708AC00A4EB9D /* ExceptionCatcher.h */; };
-		8538B9752AEB6FA400B7C21B /* ParameterAutomation.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346A92AE708AC00A4EB9D /* ParameterAutomation.h */; };
-		8538B9762AEB6FA400B7C21B /* CAudioKit.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346AA2AE708AC00A4EB9D /* CAudioKit.h */; };
-		8538B9772AEB6FA400B7C21B /* ParameterRamper.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346AB2AE708AC00A4EB9D /* ParameterRamper.h */; };
 		8538B9782AEB6FA400B7C21B /* fft.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346C82AE723CE00A4EB9D /* fft.h */; };
 		8538B9792AEB6FA400B7C21B /* mix.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346C92AE723CE00A4EB9D /* mix.h */; };
 		8538B97A2AEB6FA400B7C21B /* windows.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346CA2AE723CE00A4EB9D /* windows.h */; };
@@ -30,32 +21,6 @@
 		8538B9812AEB6FA400B7C21B /* spectral.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346D12AE723CE00A4EB9D /* spectral.h */; };
 		8538B9822AEB6FA400B7C21B /* perf.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346D22AE723CE00A4EB9D /* perf.h */; };
 		8538B9832AEB6FA400B7C21B /* filters.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346D32AE723CE00A4EB9D /* filters.h */; };
-		8538B9B32AEB6FE800B7C21B /* Node+AudioKitAU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9862AEB6FE800B7C21B /* Node+AudioKitAU.swift */; };
-		8538B9B42AEB6FE800B7C21B /* Node+Triggerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9872AEB6FE800B7C21B /* Node+Triggerable.swift */; };
-		8538B9B52AEB6FE800B7C21B /* SequencerTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9892AEB6FE800B7C21B /* SequencerTrack.swift */; };
-		8538B9B62AEB6FE800B7C21B /* Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B98A2AEB6FE800B7C21B /* Sequencer.swift */; };
-		8538B9B72AEB6FE800B7C21B /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B98B2AEB6FE800B7C21B /* Sequence.swift */; };
-		8538B9B82AEB6FE800B7C21B /* DryWetMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B98D2AEB6FE800B7C21B /* DryWetMixer.swift */; };
-		8538B9B92AEB6FE800B7C21B /* CallbackInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B98E2AEB6FE800B7C21B /* CallbackInstrument.swift */; };
-		8538B9BA2AEB6FE800B7C21B /* StereoFieldLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B98F2AEB6FE800B7C21B /* StereoFieldLimiter.swift */; };
-		8538B9BB2AEB6FE800B7C21B /* DryWetDualMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9902AEB6FE800B7C21B /* DryWetDualMixer.swift */; };
-		8538B9BD2AEB6FE800B7C21B /* AudioKitAU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9922AEB6FE800B7C21B /* AudioKitAU.swift */; };
-		8538B9BE2AEB6FE800B7C21B /* NodeParameter+Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9942AEB6FE800B7C21B /* NodeParameter+Automation.swift */; };
-		8538B9BF2AEB6FE800B7C21B /* AutomationCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9952AEB6FE800B7C21B /* AutomationCurve.swift */; };
-		8538B9C02AEB6FE800B7C21B /* ParameterAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9962AEB6FE800B7C21B /* ParameterAutomation.swift */; };
-		8538B9C12AEB6FE800B7C21B /* SequencerEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9992AEB6FE800B7C21B /* SequencerEngine.mm */; };
-		8538B9C22AEB6FE800B7C21B /* ParameterAutomation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B99A2AEB6FE800B7C21B /* ParameterAutomation.mm */; };
-		8538B9C32AEB6FE800B7C21B /* StereoFieldLimiterDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B99C2AEB6FE800B7C21B /* StereoFieldLimiterDSP.mm */; };
-		8538B9C42AEB6FE800B7C21B /* DryWetDualMixerDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B99D2AEB6FE800B7C21B /* DryWetDualMixerDSP.mm */; };
-		8538B9C62AEB6FE800B7C21B /* DryWetMixerDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B99F2AEB6FE800B7C21B /* DryWetMixerDSP.mm */; };
-		8538B9C72AEB6FE800B7C21B /* CallbackInstrumentDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9A02AEB6FE800B7C21B /* CallbackInstrumentDSP.mm */; };
-		8538B9C82AEB6FE800B7C21B /* AudioToolboxLinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9AD2AEB6FE800B7C21B /* AudioToolboxLinker.m */; };
-		8538B9C92AEB6FE800B7C21B /* ExceptionCatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9AE2AEB6FE800B7C21B /* ExceptionCatcher.m */; };
-		8538B9CA2AEB6FE800B7C21B /* DSPBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9AF2AEB6FE800B7C21B /* DSPBase.mm */; };
-		8538B9CB2AEB6FE800B7C21B /* DebugDSP.c in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9B02AEB6FE800B7C21B /* DebugDSP.c */; };
-		8538B9CC2AEB6FE800B7C21B /* AtomicDataPtr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9B12AEB6FE800B7C21B /* AtomicDataPtr.cpp */; };
-		8538B9CE2AEB721E00B7C21B /* FaderDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9CD2AEB721E00B7C21B /* FaderDSP.mm */; };
-		8538B9D02AEB733900B7C21B /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538B9CF2AEB733900B7C21B /* Fader.swift */; };
 		853C7EAD2A8468F800A28111 /* GRDBQuery in Frameworks */ = {isa = PBXBuildFile; productRef = 853C7EAC2A8468F800A28111 /* GRDBQuery */; };
 		853C7EB02A846A9500A28111 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C7EAF2A846A9500A28111 /* AppDatabase.swift */; };
 		853C7EB22A851E4100A28111 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C7EB12A851E4100A28111 /* Track.swift */; };
@@ -68,60 +33,18 @@
 		85B2672C2A816B9D0028FDD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B2672B2A816B9D0028FDD1 /* ContentView.swift */; };
 		85B2672E2A816B9F0028FDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B2672D2A816B9F0028FDD1 /* Assets.xcassets */; };
 		85B267312A816B9F0028FDD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B267302A816B9F0028FDD1 /* Preview Assets.xcassets */; };
+		85E6244A2AEBFF220036375C /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 85E624492AEBFF220036375C /* AudioKitEX */; };
+		85E6244C2AEBFF4D0036375C /* MeowDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85E6244B2AEBFF4D0036375C /* MeowDSP.mm */; };
+		85E6244E2AEBFF9A0036375C /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6244D2AEBFF9A0036375C /* Fader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		850EA1C42A82B0D000858A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8538B9862AEB6FE800B7C21B /* Node+AudioKitAU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Node+AudioKitAU.swift"; sourceTree = "<group>"; };
-		8538B9872AEB6FE800B7C21B /* Node+Triggerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Node+Triggerable.swift"; sourceTree = "<group>"; };
-		8538B9892AEB6FE800B7C21B /* SequencerTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencerTrack.swift; sourceTree = "<group>"; };
-		8538B98A2AEB6FE800B7C21B /* Sequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequencer.swift; sourceTree = "<group>"; };
-		8538B98B2AEB6FE800B7C21B /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		8538B98D2AEB6FE800B7C21B /* DryWetMixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DryWetMixer.swift; sourceTree = "<group>"; };
-		8538B98E2AEB6FE800B7C21B /* CallbackInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackInstrument.swift; sourceTree = "<group>"; };
-		8538B98F2AEB6FE800B7C21B /* StereoFieldLimiter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StereoFieldLimiter.swift; sourceTree = "<group>"; };
-		8538B9902AEB6FE800B7C21B /* DryWetDualMixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DryWetDualMixer.swift; sourceTree = "<group>"; };
-		8538B9922AEB6FE800B7C21B /* AudioKitAU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioKitAU.swift; sourceTree = "<group>"; };
-		8538B9942AEB6FE800B7C21B /* NodeParameter+Automation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NodeParameter+Automation.swift"; sourceTree = "<group>"; };
-		8538B9952AEB6FE800B7C21B /* AutomationCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomationCurve.swift; sourceTree = "<group>"; };
-		8538B9962AEB6FE800B7C21B /* ParameterAutomation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterAutomation.swift; sourceTree = "<group>"; };
-		8538B9992AEB6FE800B7C21B /* SequencerEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SequencerEngine.mm; sourceTree = "<group>"; };
-		8538B99A2AEB6FE800B7C21B /* ParameterAutomation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ParameterAutomation.mm; sourceTree = "<group>"; };
-		8538B99C2AEB6FE800B7C21B /* StereoFieldLimiterDSP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StereoFieldLimiterDSP.mm; sourceTree = "<group>"; };
-		8538B99D2AEB6FE800B7C21B /* DryWetDualMixerDSP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DryWetDualMixerDSP.mm; sourceTree = "<group>"; };
-		8538B99F2AEB6FE800B7C21B /* DryWetMixerDSP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DryWetMixerDSP.mm; sourceTree = "<group>"; };
-		8538B9A02AEB6FE800B7C21B /* CallbackInstrumentDSP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CallbackInstrumentDSP.mm; sourceTree = "<group>"; };
-		8538B9A22AEB6FE800B7C21B /* DebugDSP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugDSP.h; sourceTree = "<group>"; };
-		8538B9A32AEB6FE800B7C21B /* DSPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPBase.h; sourceTree = "<group>"; };
-		8538B9A42AEB6FE800B7C21B /* AtomicDataPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicDataPtr.h; sourceTree = "<group>"; };
-		8538B9A52AEB6FE800B7C21B /* Interop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interop.h; sourceTree = "<group>"; };
-		8538B9A62AEB6FE800B7C21B /* SequencerEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequencerEngine.h; sourceTree = "<group>"; };
-		8538B9A72AEB6FE800B7C21B /* BufferedAudioBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferedAudioBus.h; sourceTree = "<group>"; };
-		8538B9A82AEB6FE800B7C21B /* ExceptionCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionCatcher.h; sourceTree = "<group>"; };
-		8538B9A92AEB6FE800B7C21B /* ParameterAutomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterAutomation.h; sourceTree = "<group>"; };
-		8538B9AA2AEB6FE800B7C21B /* CAudioKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAudioKit.h; sourceTree = "<group>"; };
-		8538B9AB2AEB6FE800B7C21B /* ParameterRamper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterRamper.h; sourceTree = "<group>"; };
-		8538B9AD2AEB6FE800B7C21B /* AudioToolboxLinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxLinker.m; sourceTree = "<group>"; };
-		8538B9AE2AEB6FE800B7C21B /* ExceptionCatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExceptionCatcher.m; sourceTree = "<group>"; };
-		8538B9AF2AEB6FE800B7C21B /* DSPBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPBase.mm; sourceTree = "<group>"; };
-		8538B9B02AEB6FE800B7C21B /* DebugDSP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DebugDSP.c; sourceTree = "<group>"; };
-		8538B9B12AEB6FE800B7C21B /* AtomicDataPtr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AtomicDataPtr.cpp; sourceTree = "<group>"; };
-		8538B9B22AEB6FE800B7C21B /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
-		8538B9CD2AEB721E00B7C21B /* FaderDSP.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FaderDSP.mm; path = katherine/CAudioKitEX/Nodes/FaderDSP.mm; sourceTree = SOURCE_ROOT; };
-		8538B9CF2AEB733900B7C21B /* Fader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fader.swift; path = katherine/Fader.swift; sourceTree = SOURCE_ROOT; };
+		8538BA212AEBFDE800B7C21B /* AudioKitEX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AudioKitEX; path = katherine/AudioKitEX; sourceTree = "<group>"; };
 		853C7EAF2A846A9500A28111 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		853C7EB12A851E4100A28111 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		853C7EB32A851EA700A28111 /* TrackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRequest.swift; sourceTree = "<group>"; };
 		853C7EB82A851FC800A28111 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		85A346A22AE708AC00A4EB9D /* DebugDSP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugDSP.h; sourceTree = "<group>"; };
-		85A346A42AE708AC00A4EB9D /* AtomicDataPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomicDataPtr.h; sourceTree = "<group>"; };
-		85A346A52AE708AC00A4EB9D /* Interop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interop.h; sourceTree = "<group>"; };
-		85A346A62AE708AC00A4EB9D /* SequencerEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequencerEngine.h; sourceTree = "<group>"; };
-		85A346A72AE708AC00A4EB9D /* BufferedAudioBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferedAudioBus.h; sourceTree = "<group>"; };
-		85A346A82AE708AC00A4EB9D /* ExceptionCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionCatcher.h; sourceTree = "<group>"; };
-		85A346A92AE708AC00A4EB9D /* ParameterAutomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterAutomation.h; sourceTree = "<group>"; };
-		85A346AA2AE708AC00A4EB9D /* CAudioKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAudioKit.h; sourceTree = "<group>"; };
-		85A346AB2AE708AC00A4EB9D /* ParameterRamper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterRamper.h; sourceTree = "<group>"; };
 		85A346C12AE70F9400A4EB9D /* Fader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
 		85A346C82AE723CE00A4EB9D /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fft.h; sourceTree = "<group>"; };
 		85A346C92AE723CE00A4EB9D /* mix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mix.h; sourceTree = "<group>"; };
@@ -141,6 +64,8 @@
 		85B2672B2A816B9D0028FDD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B2672D2A816B9F0028FDD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B267302A816B9F0028FDD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85E6244B2AEBFF4D0036375C /* MeowDSP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MeowDSP.mm; sourceTree = "<group>"; };
+		85E6244D2AEBFF9A0036375C /* Fader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				850EA1BD2A81871F00858A72 /* AudioKit in Frameworks */,
+				85E6244A2AEBFF220036375C /* AudioKitEX in Frameworks */,
 				853C7EB72A851F7700A28111 /* GRDB in Frameworks */,
 				850EA1C32A81874100858A72 /* AudioKitUI in Frameworks */,
 				853C7EAD2A8468F800A28111 /* GRDBQuery in Frameworks */,
@@ -158,112 +84,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8538B9852AEB6FE800B7C21B /* AudioKitEX */ = {
+		8538BA202AEBFDE800B7C21B /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				8538B9862AEB6FE800B7C21B /* Node+AudioKitAU.swift */,
-				8538B9872AEB6FE800B7C21B /* Node+Triggerable.swift */,
-				8538B9882AEB6FE800B7C21B /* Sequencing */,
-				8538B98C2AEB6FE800B7C21B /* Nodes */,
-				8538B9922AEB6FE800B7C21B /* AudioKitAU.swift */,
-				8538B9932AEB6FE800B7C21B /* Automation */,
+				8538BA212AEBFDE800B7C21B /* AudioKitEX */,
 			);
-			path = AudioKitEX;
-			sourceTree = "<group>";
-		};
-		8538B9882AEB6FE800B7C21B /* Sequencing */ = {
-			isa = PBXGroup;
-			children = (
-				8538B9892AEB6FE800B7C21B /* SequencerTrack.swift */,
-				8538B98A2AEB6FE800B7C21B /* Sequencer.swift */,
-				8538B98B2AEB6FE800B7C21B /* Sequence.swift */,
-			);
-			path = Sequencing;
-			sourceTree = "<group>";
-		};
-		8538B98C2AEB6FE800B7C21B /* Nodes */ = {
-			isa = PBXGroup;
-			children = (
-				8538B9CF2AEB733900B7C21B /* Fader.swift */,
-				8538B98D2AEB6FE800B7C21B /* DryWetMixer.swift */,
-				8538B98E2AEB6FE800B7C21B /* CallbackInstrument.swift */,
-				8538B98F2AEB6FE800B7C21B /* StereoFieldLimiter.swift */,
-				8538B9902AEB6FE800B7C21B /* DryWetDualMixer.swift */,
-			);
-			path = Nodes;
-			sourceTree = "<group>";
-		};
-		8538B9932AEB6FE800B7C21B /* Automation */ = {
-			isa = PBXGroup;
-			children = (
-				8538B9942AEB6FE800B7C21B /* NodeParameter+Automation.swift */,
-				8538B9952AEB6FE800B7C21B /* AutomationCurve.swift */,
-				8538B9962AEB6FE800B7C21B /* ParameterAutomation.swift */,
-			);
-			path = Automation;
-			sourceTree = "<group>";
-		};
-		8538B9972AEB6FE800B7C21B /* CAudioKitEX */ = {
-			isa = PBXGroup;
-			children = (
-				8538B9982AEB6FE800B7C21B /* Sequencing */,
-				8538B99B2AEB6FE800B7C21B /* Nodes */,
-				8538B9A12AEB6FE800B7C21B /* include */,
-				8538B9AC2AEB6FE800B7C21B /* Internals */,
-			);
-			name = CAudioKitEX;
-			path = ../../AudioKitEX/Sources/CAudioKitEX;
-			sourceTree = "<group>";
-		};
-		8538B9982AEB6FE800B7C21B /* Sequencing */ = {
-			isa = PBXGroup;
-			children = (
-				8538B9992AEB6FE800B7C21B /* SequencerEngine.mm */,
-				8538B99A2AEB6FE800B7C21B /* ParameterAutomation.mm */,
-			);
-			path = Sequencing;
-			sourceTree = "<group>";
-		};
-		8538B99B2AEB6FE800B7C21B /* Nodes */ = {
-			isa = PBXGroup;
-			children = (
-				8538B99C2AEB6FE800B7C21B /* StereoFieldLimiterDSP.mm */,
-				8538B9CD2AEB721E00B7C21B /* FaderDSP.mm */,
-				8538B99D2AEB6FE800B7C21B /* DryWetDualMixerDSP.mm */,
-				8538B99F2AEB6FE800B7C21B /* DryWetMixerDSP.mm */,
-				8538B9A02AEB6FE800B7C21B /* CallbackInstrumentDSP.mm */,
-			);
-			path = Nodes;
-			sourceTree = "<group>";
-		};
-		8538B9A12AEB6FE800B7C21B /* include */ = {
-			isa = PBXGroup;
-			children = (
-				8538B9A22AEB6FE800B7C21B /* DebugDSP.h */,
-				8538B9A32AEB6FE800B7C21B /* DSPBase.h */,
-				8538B9A42AEB6FE800B7C21B /* AtomicDataPtr.h */,
-				8538B9A52AEB6FE800B7C21B /* Interop.h */,
-				8538B9A62AEB6FE800B7C21B /* SequencerEngine.h */,
-				8538B9A72AEB6FE800B7C21B /* BufferedAudioBus.h */,
-				8538B9A82AEB6FE800B7C21B /* ExceptionCatcher.h */,
-				8538B9A92AEB6FE800B7C21B /* ParameterAutomation.h */,
-				8538B9AA2AEB6FE800B7C21B /* CAudioKit.h */,
-				8538B9AB2AEB6FE800B7C21B /* ParameterRamper.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		8538B9AC2AEB6FE800B7C21B /* Internals */ = {
-			isa = PBXGroup;
-			children = (
-				8538B9AD2AEB6FE800B7C21B /* AudioToolboxLinker.m */,
-				8538B9AE2AEB6FE800B7C21B /* ExceptionCatcher.m */,
-				8538B9AF2AEB6FE800B7C21B /* DSPBase.mm */,
-				8538B9B02AEB6FE800B7C21B /* DebugDSP.c */,
-				8538B9B12AEB6FE800B7C21B /* AtomicDataPtr.cpp */,
-				8538B9B22AEB6FE800B7C21B /* RingBuffer.h */,
-			);
-			path = Internals;
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		853C7EB52A851F7700A28111 /* Frameworks */ = {
@@ -271,38 +97,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		85A346972AE708AC00A4EB9D /* CAudioKitEX */ = {
-			isa = PBXGroup;
-			children = (
-				85A3469B2AE708AC00A4EB9D /* Nodes */,
-				85A346A12AE708AC00A4EB9D /* include */,
-			);
-			path = CAudioKitEX;
-			sourceTree = "<group>";
-		};
-		85A3469B2AE708AC00A4EB9D /* Nodes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Nodes;
-			sourceTree = "<group>";
-		};
-		85A346A12AE708AC00A4EB9D /* include */ = {
-			isa = PBXGroup;
-			children = (
-				85A346A22AE708AC00A4EB9D /* DebugDSP.h */,
-				85A346A42AE708AC00A4EB9D /* AtomicDataPtr.h */,
-				85A346A52AE708AC00A4EB9D /* Interop.h */,
-				85A346A62AE708AC00A4EB9D /* SequencerEngine.h */,
-				85A346A72AE708AC00A4EB9D /* BufferedAudioBus.h */,
-				85A346A82AE708AC00A4EB9D /* ExceptionCatcher.h */,
-				85A346A92AE708AC00A4EB9D /* ParameterAutomation.h */,
-				85A346AA2AE708AC00A4EB9D /* CAudioKit.h */,
-				85A346AB2AE708AC00A4EB9D /* ParameterRamper.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		85A346C72AE723CE00A4EB9D /* dsp */ = {
@@ -327,6 +121,7 @@
 		85B2671D2A816B9D0028FDD1 = {
 			isa = PBXGroup;
 			children = (
+				8538BA202AEBFDE800B7C21B /* Packages */,
 				853C7EB82A851FC800A28111 /* Persistence.swift */,
 				85B267282A816B9D0028FDD1 /* katherine */,
 				85B267272A816B9D0028FDD1 /* Products */,
@@ -345,8 +140,9 @@
 		85B267282A816B9D0028FDD1 /* katherine */ = {
 			isa = PBXGroup;
 			children = (
+				85E6244D2AEBFF9A0036375C /* Fader.swift */,
+				85E6244B2AEBFF4D0036375C /* MeowDSP.mm */,
 				85A346C12AE70F9400A4EB9D /* Fader.swift */,
-				85A346972AE708AC00A4EB9D /* CAudioKitEX */,
 				850EA1C42A82B0D000858A72 /* Info.plist */,
 				85B267292A816B9D0028FDD1 /* katherineApp.swift */,
 				85B2672B2A816B9D0028FDD1 /* ContentView.swift */,
@@ -356,8 +152,6 @@
 				853C7EB12A851E4100A28111 /* Track.swift */,
 				853C7EB32A851EA700A28111 /* TrackRequest.swift */,
 				85B2672D2A816B9F0028FDD1 /* Assets.xcassets */,
-				8538B9852AEB6FE800B7C21B /* AudioKitEX */,
-				8538B9972AEB6FE800B7C21B /* CAudioKitEX */,
 				85B2672F2A816B9F0028FDD1 /* Preview Content */,
 			);
 			path = katherine;
@@ -392,6 +186,7 @@
 				850EA1C22A81874100858A72 /* AudioKitUI */,
 				853C7EAC2A8468F800A28111 /* GRDBQuery */,
 				853C7EB62A851F7700A28111 /* GRDB */,
+				85E624492AEBFF220036375C /* AudioKitEX */,
 			);
 			productName = katherine;
 			productReference = 85B267262A816B9D0028FDD1 /* katherine.app */;
@@ -456,59 +251,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8538B9C62AEB6FE800B7C21B /* DryWetMixerDSP.mm in Sources */,
-				8538B9CC2AEB6FE800B7C21B /* AtomicDataPtr.cpp in Sources */,
-				8538B9B82AEB6FE800B7C21B /* DryWetMixer.swift in Sources */,
-				8538B96E2AEB6FA400B7C21B /* DebugDSP.h in Sources */,
-				8538B9D02AEB733900B7C21B /* Fader.swift in Sources */,
-				8538B9702AEB6FA400B7C21B /* AtomicDataPtr.h in Sources */,
-				8538B9B52AEB6FE800B7C21B /* SequencerTrack.swift in Sources */,
-				8538B9712AEB6FA400B7C21B /* Interop.h in Sources */,
-				8538B9722AEB6FA400B7C21B /* SequencerEngine.h in Sources */,
-				8538B9732AEB6FA400B7C21B /* BufferedAudioBus.h in Sources */,
-				8538B9BE2AEB6FE800B7C21B /* NodeParameter+Automation.swift in Sources */,
-				8538B9742AEB6FA400B7C21B /* ExceptionCatcher.h in Sources */,
-				8538B9752AEB6FA400B7C21B /* ParameterAutomation.h in Sources */,
-				8538B9762AEB6FA400B7C21B /* CAudioKit.h in Sources */,
-				8538B9772AEB6FA400B7C21B /* ParameterRamper.h in Sources */,
 				8538B9782AEB6FA400B7C21B /* fft.h in Sources */,
-				8538B9C82AEB6FE800B7C21B /* AudioToolboxLinker.m in Sources */,
-				8538B9C12AEB6FE800B7C21B /* SequencerEngine.mm in Sources */,
+				85E6244C2AEBFF4D0036375C /* MeowDSP.mm in Sources */,
 				8538B9792AEB6FA400B7C21B /* mix.h in Sources */,
-				8538B9CE2AEB721E00B7C21B /* FaderDSP.mm in Sources */,
 				8538B97A2AEB6FA400B7C21B /* windows.h in Sources */,
-				8538B9CA2AEB6FE800B7C21B /* DSPBase.mm in Sources */,
-				8538B9CB2AEB6FE800B7C21B /* DebugDSP.c in Sources */,
-				8538B9B92AEB6FE800B7C21B /* CallbackInstrument.swift in Sources */,
+				85E6244E2AEBFF9A0036375C /* Fader.swift in Sources */,
 				8538B97B2AEB6FA400B7C21B /* README.md in Sources */,
-				8538B9C02AEB6FE800B7C21B /* ParameterAutomation.swift in Sources */,
 				8538B97C2AEB6FA400B7C21B /* common.h in Sources */,
 				8538B97D2AEB6FA400B7C21B /* envelopes.h in Sources */,
-				8538B9B62AEB6FE800B7C21B /* Sequencer.swift in Sources */,
 				8538B97E2AEB6FA400B7C21B /* delay.h in Sources */,
 				8538B97F2AEB6FA400B7C21B /* curves.h in Sources */,
 				8538B9802AEB6FA400B7C21B /* LICENSE.txt in Sources */,
-				8538B9BB2AEB6FE800B7C21B /* DryWetDualMixer.swift in Sources */,
-				8538B9C32AEB6FE800B7C21B /* StereoFieldLimiterDSP.mm in Sources */,
 				8538B9812AEB6FA400B7C21B /* spectral.h in Sources */,
-				8538B9C72AEB6FE800B7C21B /* CallbackInstrumentDSP.mm in Sources */,
-				8538B9B72AEB6FE800B7C21B /* Sequence.swift in Sources */,
-				8538B9B42AEB6FE800B7C21B /* Node+Triggerable.swift in Sources */,
 				8538B9822AEB6FA400B7C21B /* perf.h in Sources */,
-				8538B9C42AEB6FE800B7C21B /* DryWetDualMixerDSP.mm in Sources */,
 				8538B9832AEB6FA400B7C21B /* filters.h in Sources */,
-				8538B9C22AEB6FE800B7C21B /* ParameterAutomation.mm in Sources */,
-				8538B9BD2AEB6FE800B7C21B /* AudioKitAU.swift in Sources */,
-				8538B9B32AEB6FE800B7C21B /* Node+AudioKitAU.swift in Sources */,
-				8538B9BA2AEB6FE800B7C21B /* StereoFieldLimiter.swift in Sources */,
-				8538B9BF2AEB6FE800B7C21B /* AutomationCurve.swift in Sources */,
 				853C7EB42A851EA700A28111 /* TrackRequest.swift in Sources */,
 				853C7EB02A846A9500A28111 /* AppDatabase.swift in Sources */,
 				85B2672C2A816B9D0028FDD1 /* ContentView.swift in Sources */,
 				853C7EB92A851FC800A28111 /* Persistence.swift in Sources */,
 				85B2672A2A816B9D0028FDD1 /* katherineApp.swift in Sources */,
 				853C7EB22A851E4100A28111 /* Track.swift in Sources */,
-				8538B9C92AEB6FE800B7C21B /* ExceptionCatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +536,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 853C7EAE2A846A7500A28111 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
+		};
+		85E624492AEBFF220036375C /* AudioKitEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AudioKitEX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
