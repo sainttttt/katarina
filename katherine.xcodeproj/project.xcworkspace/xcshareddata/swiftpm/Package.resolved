@@ -1,50 +1,43 @@
 {
-  "pins" : [
-    {
-      "identity" : "audiokit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AudioKit/AudioKit.git",
-      "state" : {
-        "revision" : "c30a151fea40696ad0a45c60c2bba29112bb4279",
-        "version" : "5.6.1"
+  "object": {
+    "pins": [
+      {
+        "package": "AudioKitUI",
+        "repositoryURL": "https://github.com/AudioKit/AudioKitUI.git",
+        "state": {
+          "branch": null,
+          "revision": "5c41de4c021567e8d4f187f6d79d96dfcef704f6",
+          "version": "0.3.5"
+        }
+      },
+      {
+        "package": "Controls",
+        "repositoryURL": "https://github.com/AudioKit/Controls.git",
+        "state": {
+          "branch": null,
+          "revision": "6861a9380963378115856f0b9b54414a9ec5f1ad",
+          "version": "1.1.2"
+        }
+      },
+      {
+        "package": "GRDB",
+        "repositoryURL": "https://github.com/groue/GRDB.swift.git",
+        "state": {
+          "branch": "master",
+          "revision": "e83f3eb25ef4d5a36a13dbee98f8ac67e24e5c8f",
+          "version": null
+        }
+      },
+      {
+        "package": "GRDBQuery",
+        "repositoryURL": "https://github.com/groue/GRDBQuery",
+        "state": {
+          "branch": "main",
+          "revision": "79fb10dfbb2f6784ef346ab80c4062ebd02cfbe7",
+          "version": null
+        }
       }
-    },
-    {
-      "identity" : "audiokitui",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AudioKit/AudioKitUI.git",
-      "state" : {
-        "revision" : "5c41de4c021567e8d4f187f6d79d96dfcef704f6",
-        "version" : "0.3.5"
-      }
-    },
-    {
-      "identity" : "controls",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AudioKit/Controls.git",
-      "state" : {
-        "revision" : "6861a9380963378115856f0b9b54414a9ec5f1ad",
-        "version" : "1.1.2"
-      }
-    },
-    {
-      "identity" : "grdb.swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/groue/GRDB.swift.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "e83f3eb25ef4d5a36a13dbee98f8ac67e24e5c8f"
-      }
-    },
-    {
-      "identity" : "grdbquery",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/groue/GRDBQuery",
-      "state" : {
-        "branch" : "main",
-        "revision" : "79fb10dfbb2f6784ef346ab80c4062ebd02cfbe7"
-      }
-    }
-  ],
-  "version" : 2
+    ]
+  },
+  "version": 1
 }

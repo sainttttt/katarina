@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		850EA1BD2A81871F00858A72 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 850EA1BC2A81871F00858A72 /* AudioKit */; };
 		850EA1C32A81874100858A72 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 850EA1C22A81874100858A72 /* AudioKitUI */; };
 		8538B9782AEB6FA400B7C21B /* fft.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346C82AE723CE00A4EB9D /* fft.h */; };
 		8538B9792AEB6FA400B7C21B /* mix.h in Sources */ = {isa = PBXBuildFile; fileRef = 85A346C92AE723CE00A4EB9D /* mix.h */; };
@@ -27,6 +26,7 @@
 		853C7EB42A851EA700A28111 /* TrackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C7EB32A851EA700A28111 /* TrackRequest.swift */; };
 		853C7EB72A851F7700A28111 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 853C7EB62A851F7700A28111 /* GRDB */; };
 		853C7EB92A851FC800A28111 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C7EB82A851FC800A28111 /* Persistence.swift */; };
+		858488622AF163A2001214EB /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 858488612AF163A2001214EB /* AudioKit */; };
 		85A346D52AE723CE00A4EB9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 85A346CB2AE723CE00A4EB9D /* README.md */; };
 		85A346D62AE723CE00A4EB9D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 85A346D02AE723CE00A4EB9D /* LICENSE.txt */; };
 		85B2672A2A816B9D0028FDD1 /* katherineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B267292A816B9D0028FDD1 /* katherineApp.swift */; };
@@ -45,6 +45,7 @@
 		853C7EB12A851E4100A28111 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		853C7EB32A851EA700A28111 /* TrackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRequest.swift; sourceTree = "<group>"; };
 		853C7EB82A851FC800A28111 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		858488602AF16395001214EB /* AudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AudioKit; path = ../AudioKit; sourceTree = "<group>"; };
 		85A346C12AE70F9400A4EB9D /* Fader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
 		85A346C82AE723CE00A4EB9D /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fft.h; sourceTree = "<group>"; };
 		85A346C92AE723CE00A4EB9D /* mix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mix.h; sourceTree = "<group>"; };
@@ -73,9 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850EA1BD2A81871F00858A72 /* AudioKit in Frameworks */,
 				85E6244A2AEBFF220036375C /* AudioKitEX in Frameworks */,
 				853C7EB72A851F7700A28111 /* GRDB in Frameworks */,
+				858488622AF163A2001214EB /* AudioKit in Frameworks */,
 				850EA1C32A81874100858A72 /* AudioKitUI in Frameworks */,
 				853C7EAD2A8468F800A28111 /* GRDBQuery in Frameworks */,
 			);
@@ -87,6 +88,7 @@
 		8538BA202AEBFDE800B7C21B /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				858488602AF16395001214EB /* AudioKit */,
 				8538BA212AEBFDE800B7C21B /* AudioKitEX */,
 			);
 			name = Packages;
@@ -182,11 +184,11 @@
 			);
 			name = katherine;
 			packageProductDependencies = (
-				850EA1BC2A81871F00858A72 /* AudioKit */,
 				850EA1C22A81874100858A72 /* AudioKitUI */,
 				853C7EAC2A8468F800A28111 /* GRDBQuery */,
 				853C7EB62A851F7700A28111 /* GRDB */,
 				85E624492AEBFF220036375C /* AudioKitEX */,
+				858488612AF163A2001214EB /* AudioKit */,
 			);
 			productName = katherine;
 			productReference = 85B267262A816B9D0028FDD1 /* katherine.app */;
@@ -218,7 +220,6 @@
 			);
 			mainGroup = 85B2671D2A816B9D0028FDD1;
 			packageReferences = (
-				850EA1BB2A81871F00858A72 /* XCRemoteSwiftPackageReference "AudioKit" */,
 				850EA1C12A81874100858A72 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 				853C7EAB2A8468F800A28111 /* XCRemoteSwiftPackageReference "GRDBQuery" */,
 				853C7EAE2A846A7500A28111 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
@@ -424,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emily.katherine.katherine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,6 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emily.katherine.katherine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -488,14 +490,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		850EA1BB2A81871F00858A72 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		850EA1C12A81874100858A72 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
@@ -523,11 +517,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		850EA1BC2A81871F00858A72 /* AudioKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 850EA1BB2A81871F00858A72 /* XCRemoteSwiftPackageReference "AudioKit" */;
-			productName = AudioKit;
-		};
 		850EA1C22A81874100858A72 /* AudioKitUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 850EA1C12A81874100858A72 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
@@ -542,6 +531,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 853C7EAE2A846A7500A28111 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
+		};
+		858488612AF163A2001214EB /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AudioKit;
 		};
 		85E624492AEBFF220036375C /* AudioKitEX */ = {
 			isa = XCSwiftPackageProductDependency;

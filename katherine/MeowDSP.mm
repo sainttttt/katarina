@@ -24,9 +24,10 @@ private:
     int regCount = 0;
     int cirBufPosStart = 0;
     int cirBufPosEnd = 0;
-    int cirBuffSize = 240000000;
+    int cirBuffSize = 2000000;
     float **refArr;
     bool setRef = false;
+    bool oneTime = true;
     signalsmith::stretch::SignalsmithStretch<float> stretch;
 
 public:
@@ -140,27 +141,34 @@ public:
       }
 
 
-
       int numsamples = (int)range.count;
+      int numsamples = 512
 
-       //NSLog(@"%d", numsamples);
+      if (oneTime) {
+        NSLog(@"numsamples: %d", numsamples);
+        oneTime = false;
+      }
 
-      stretch.setTransposeFactor(0.5); // up one octave
+//      stretch.setTransposeFactor(0.5); // up one octave
       //stretch.setTransposeSemitones(-12)
 
-      stretch.setTransposeSemitones(3, 8000/sampleRate);
-      int inputNum = numsamples * 1;
+      //stretch.setTransposeSemitones(3, 8000/sampleRate);
+      //int inputNum = numsamples * 1.1;
+      int inputNum = numsamples * 1.05;
 
       float **inputs;
       inputs = (float **)malloc(sizeof(*inputs) * 2 * inputNum);
       for (int i = 0; i < 2; i++) {
         inputs[i] = (float *)malloc(sizeof(float) * inputNum);
         for(int j = 0; j < inputNum; j++)
-          inputs[i][j] = inputSample(i, j);
+          if (setRef)
+            inputs[i][j] = refArr[i][j + regCount];
+          else
+            inputs[i][j] = 0.0;
       }
 
       float **outputs;
-      int outputNum = numsamples * 1.2;
+      int outputNum = numsamples * 1;
       outputs = (float **)malloc(sizeof(*outputs) * 2 * outputNum);
       for (int i = 0; i < 2; i++) {
         outputs[i] = (float *)malloc(sizeof(float) * outputNum);
@@ -177,18 +185,18 @@ public:
         cirBufPosEnd = (cirBufPosEnd + 1) % cirBuffSize;
       }
 
-      int delay = 0;
+      int delay = 1;
       for (int i = 0; i < inputNum; i++) {
         float& leftOut = outputSample(0, i);
         float& rightOut = outputSample(1, i);
 
-        //if (cirBufPosEnd > delay) {
-        if (setRef) {
-          //leftOut = cirBuff[0][cirBufPosStart];
-          //rightOut = cirBuff[1][cirBufPosStart];
+        if (cirBufPosEnd > delay && setRef) {
+        //if (setRef) {
+          leftOut = cirBuff[0][cirBufPosStart];
+          rightOut = cirBuff[1][cirBufPosStart];
 
-          leftOut = refArr[0][regCount];
-          rightOut = refArr[1][regCount];
+          //leftOut = refArr[0][regCount];
+          //rightOut = refArr[1][regCount];
           regCount++;
           cirBufPosStart = (cirBufPosStart + 1) % cirBuffSize;
         } else {
@@ -196,6 +204,9 @@ public:
           rightOut = 0.0;
         }
       }
+
+        delete[] inputs;
+        delete[] outputs;
 
 
 
