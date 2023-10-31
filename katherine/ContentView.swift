@@ -22,10 +22,9 @@ struct PlayerData {
     var fileToPlay: URL?
 }
 
-// class Track: NSObject, Codable {
-//     var url: URL
-//     var playArm: Bool
-// }
+public func printWelcomeMessage(_ name: String) {
+  print("Welcome \(name)")
+}
 
 class RecorderConductor: ObservableObject, HasAudioEngine {
     let engine = AudioEngine()
@@ -35,7 +34,10 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
     let mixer = Mixer()
     let player = AudioPlayer()
     var isPlaying = false
+    var newFile: AVAudioFile?
+    var newFile2: AVAudioFile?
     var previousFile: URL?
+    var xa:  UnsafeMutablePointer<UnsafeMutablePointer<Float>?>?
 
 
     @Published var playerData = PlayerData() {
@@ -55,7 +57,53 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
                     // let audioFormat = AVAudioFormat(standardFormatWithSampleRate: 44_100, channels: 2)!
                     // var settings = audioFormat.settings
                     if true {
-                        var newFile = try AVAudioFile(forReading: playerData.fileToPlay!)
+                        newFile2 = try AVAudioFile(forReading: playerData.fileToPlay!)
+                        newFile = try AVAudioFile(forReading: playerData.fileToPlay!)
+
+                        //var floats = newFile.toFloatChannelData()
+
+
+                        let pcmbuffer = newFile!.toAVAudioPCMBuffer()!
+                        guard let pcm = pcmbuffer.floatChannelData else {
+                            return
+                        }
+
+                        print("woof dd first \(pcm[1][111231])")
+
+                        print("woof Starting")
+
+                        var x0: UnsafeMutablePointer<Float>?
+                        var x1: UnsafeMutablePointer<Float>?
+                        x0 = UnsafeMutablePointer<Float>.init(mutating:pcm[0])
+                        x1 = UnsafeMutablePointer<Float>.init(mutating:pcm[1])
+
+                        var xx = [x0, x1]
+
+                        xa =  UnsafeMutablePointer<UnsafeMutablePointer<Float>?>.allocate(capacity: 2)
+                        xa!.initialize(from: &xx, count: 2)
+
+                        print("woof dd \(xx[0]![34])")
+
+                        let frameLength = Int(pcmbuffer.frameLength)
+                        mew.au.meow(sound: "baa 2222 wooof", floats: xa!, frameLength: frameLength)
+
+
+                        let channelCount = 2
+                        let stride = pcmbuffer.stride
+
+                        // // Preallocate our Array so we're not constantly thrashing while resizing as we append.
+                        // var result = Array(repeating: [Float](zeros: frameLength), count: channelCount)
+
+                        // for channel in 0 ..< channelCount {
+                        //     // Make sure we go through all of the frames...
+                        //     for sampleIndex in 0 ..< frameLength {
+                        //         result[channel][sampleIndex] = pcm[channel][sampleIndex * stride]
+                        //     }
+                        // }
+
+
+                        // print("woof \(result[1][2])")
+
 
                         var options = FormatConverter.Options()
                         options.format = AudioFileFormat(rawValue: "m4a")
@@ -81,7 +129,7 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
                         print(newFile)
                         // settings[AVFormatIDKey] = kAudioFormatMPEG4AAC
                         // settings[AVLinearPCMIsNonInterleaved] = NSNumber(value: false)
-                        player.file = newFile
+                        player.file = newFile2
                         // mew.setFile(
                     }
                 } catch {
@@ -138,7 +186,7 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
     init() {
         print("starting")
 
-        Settings.bufferLength = .short
+        Settings.bufferLength = .longest
         do {
             try AVAudioSession.sharedInstance().setPreferredIOBufferDuration(Settings.bufferLength.duration)
             try AVAudioSession.sharedInstance().setCategory(.playAndRecord,
@@ -157,7 +205,7 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
         self.silencer = silencer
         mixer.addInput(silencer)
         mew = MeowFader(player)
-        mew.au.meow(sound: "baa wooof")
+        //mew.au.meow(sound: "baa wooof")
         // cat = mew.avAudioNode.auAudioUnit;
 
         // dog = cat!.fullStateForDocument
@@ -276,6 +324,10 @@ struct ContentView: View {
             .padding()
             // .cookbookNavBarTitle("Recorder")
             .onAppear {
+                enum Test {}
+                var string: String = ""
+                debugPrint(Test.self, to: &string)     
+                print("Module name: \(string.split(separator: ".").first ?? "")")
                 conductor.start()
                 do {
                     getFiles(appDatabase)
