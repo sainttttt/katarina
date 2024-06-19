@@ -151,18 +151,18 @@ open class AudioKitAU: AUAudioUnit {
     }
 
     public func meow(sound: String, floats: UnsafeMutablePointer<UnsafeMutablePointer<Float>?>, frameLength: Int) {
-        var bytes: [UInt8] = [39, 77, 111, 111, 102, 33, 39, 0]
-        let uint8Pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: 8)
-        uint8Pointer.initialize(from: &bytes, count: 8)
-        
-        
-        var array: [Float] = [10.0, 50.0, 40.0]
-        let numeroDados = 10
+        // var bytes: [UInt8] = [39, 77, 111, 111, 102, 33, 39, 0]
+        // let uint8Pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: 8)
+        // uint8Pointer.initialize(from: &bytes, count: 8)
 
-        let outputReal = UnsafeMutablePointer<Float>.allocate(capacity: 3)
-        outputReal.initialize(from: &array, count: 3)
 
-        print("baa got here \(floats[1]?[1])")
+        // var array: [Float] = [10.0, 50.0, 40.0]
+        // let numeroDados = 10
+
+        // let outputReal = UnsafeMutablePointer<Float>.allocate(capacity: 3)
+        // outputReal.initialize(from: &array, count: 3)
+
+        // print("baa got here \(floats[1]?[1])")
 
         meow2(dsp, sound, floats, Int32(frameLength))
         //array.withUnsafeBufferPointer { (cArray: UnsafeBufferPointer<Float>) -> () in
