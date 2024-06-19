@@ -322,11 +322,10 @@ struct ContentView: View {
             }
         }
             .padding()
-            // .cookbookNavBarTitle("Recorder")
             .onAppear {
                 enum Test {}
                 var string: String = ""
-                debugPrint(Test.self, to: &string)     
+                debugPrint(Test.self, to: &string)
                 print("Module name: \(string.split(separator: ".").first ?? "")")
                 conductor.start()
                 do {

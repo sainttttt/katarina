@@ -25,6 +25,10 @@ private:
     int cirBufPosStart = 0;
     int cirBufPosEnd = 0;
     int cirBuffSize = 2000000;
+
+    float **inputs = 0;
+    float **outputs = 0;
+
     float **refArr;
     bool setRef = false;
     bool oneTime = true;
@@ -71,9 +75,7 @@ public:
           refArr[i][j] = arr[i][j];
         }
       }
-
-
-
+        
       //refArr = arr;
       printf("here meow3 %s --- %f %d\n", sound, refArr[1][4], frameLength);
       setRef = true;
@@ -140,9 +142,7 @@ public:
         //setRef = false;
       }
 
-
       int numsamples = (int)range.count;
-      int numsamples = 512
 
       if (oneTime) {
         NSLog(@"numsamples: %d", numsamples);
@@ -154,59 +154,83 @@ public:
 
       //stretch.setTransposeSemitones(3, 8000/sampleRate);
       //int inputNum = numsamples * 1.1;
-      int inputNum = numsamples * 1.05;
+        int inputNum = numsamples * 1.4;
 
-      float **inputs;
-      inputs = (float **)malloc(sizeof(*inputs) * 2 * inputNum);
-      for (int i = 0; i < 2; i++) {
-        inputs[i] = (float *)malloc(sizeof(float) * inputNum);
-        for(int j = 0; j < inputNum; j++)
-          if (setRef)
-            inputs[i][j] = refArr[i][j + regCount];
-          else
-            inputs[i][j] = 0.0;
+      if (inputs == 0) {
+
+        printf("alloc inputs \n");
+        inputs = (float **)malloc(sizeof(*inputs) * 2 * inputNum);
+        for (int i = 0; i < 2; i++) {
+          inputs[i] = (float *)malloc(sizeof(float) * inputNum);
+        }
       }
 
-      float **outputs;
+      for(int j = 0; j < inputNum; j++) {
+        if (setRef) {
+          inputs[0][j] = refArr[0][regCount];
+          inputs[1][j] = refArr[1][regCount];
+          regCount++;
+        } else {
+          inputs[0][j] = 0.0;
+          inputs[1][j] = 0.0;
+        }
+      }
+
       int outputNum = numsamples * 1;
-      outputs = (float **)malloc(sizeof(*outputs) * 2 * outputNum);
-      for (int i = 0; i < 2; i++) {
-        outputs[i] = (float *)malloc(sizeof(float) * outputNum);
-        for(int j = 0; j < outputNum; j++)
-          outputs[i][j] = 0;
+      if (outputs == 0) {
+        printf("alloc outputs \n");
+        outputs = (float **)malloc(sizeof(*outputs) * 2 * inputNum);
+        for (int i = 0; i < 2; i++) {
+          outputs[i] = (float *)malloc(sizeof(float) * inputNum);
+        }
       }
+
+//      for (int i = 0; i < 2; i++) {
+//        for(int j = 0; j < outputNum; j++)
+//          outputs[i][j] = 0;
+//      }
 
 
       stretch.process(inputs, inputNum, outputs, outputNum);
 
-      for (int j = 0; j < outputNum; j++) {
-        cirBuff[0][cirBufPosEnd] = outputs[0][j];
-        cirBuff[1][cirBufPosEnd] = outputs[1][j];
-        cirBufPosEnd = (cirBufPosEnd + 1) % cirBuffSize;
-      }
+     // for (int j = 0; j < outputNum; j++) {
+     //   cirBuff[0][cirBufPosEnd] = outputs[0][j];
+     //   cirBuff[1][cirBufPosEnd] = outputs[1][j];
+     //   cirBufPosEnd = (cirBufPosEnd + 1) % cirBuffSize;
+     // }
 
       int delay = 1;
-      for (int i = 0; i < inputNum; i++) {
+      for (int i = 0; i < outputNum; i++) {
         float& leftOut = outputSample(0, i);
         float& rightOut = outputSample(1, i);
 
-        if (cirBufPosEnd > delay && setRef) {
-        //if (setRef) {
-          leftOut = cirBuff[0][cirBufPosStart];
-          rightOut = cirBuff[1][cirBufPosStart];
 
-          //leftOut = refArr[0][regCount];
-          //rightOut = refArr[1][regCount];
-          regCount++;
-          cirBufPosStart = (cirBufPosStart + 1) % cirBuffSize;
-        } else {
-          leftOut = 0.0;
-          rightOut = 0.0;
-        }
+      if (setRef) {
+        leftOut = outputs[0][i];
+        rightOut = outputs[1][i];
+        //leftOut = refArr[0][regCount];
+        //rightOut = refArr[1][regCount];
+        //regCount++;
       }
 
-        delete[] inputs;
-        delete[] outputs;
+
+      //  if (cirBufPosEnd > delay && setRef) {
+      //  //if (setRef) {
+      //    leftOut = cirBuff[0][cirBufPosStart];
+      //    rightOut = cirBuff[1][cirBufPosStart];
+
+      //    //leftOut = refArr[0][regCount];
+      //    //rightOut = refArr[1][regCount];
+      //    regCount++;
+      //    cirBufPosStart = (cirBufPosStart + 1) % cirBuffSize;
+      //  } else {
+      //    leftOut = 0.0;
+      //    rightOut = 0.0;
+      //  }
+      }
+
+        //delete[] inputs;
+        //delete[] outputs;
 
 
 
@@ -242,8 +266,8 @@ public:
 };
 
 
-  AK_REGISTER_DSP(MeowDSP, "meow")
-  AK_REGISTER_PARAMETER(MeowParameterLeftGain)
-  AK_REGISTER_PARAMETER(MeowParameterRightGain)
-  AK_REGISTER_PARAMETER(MeowParameterFlipStereo)
+AK_REGISTER_DSP(MeowDSP, "meow")
+AK_REGISTER_PARAMETER(MeowParameterLeftGain)
+AK_REGISTER_PARAMETER(MeowParameterRightGain)
+AK_REGISTER_PARAMETER(MeowParameterFlipStereo)
 AK_REGISTER_PARAMETER(MeowParameterMixToMono)
