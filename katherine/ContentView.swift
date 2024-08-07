@@ -189,8 +189,14 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
         Settings.bufferLength = .longest
         do {
             try AVAudioSession.sharedInstance().setPreferredIOBufferDuration(Settings.bufferLength.duration)
-            try AVAudioSession.sharedInstance().setCategory(.playAndRecord,
-                options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+
+            #if targetEnvironment(simulator)
+                try AVAudioSession.sharedInstance().setCategory(.playback,
+                                                                options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+            #else
+                try AVAudioSession.sharedInstance().setCategory(.playAndRecord,
+                                                                options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+            #endif
             try AVAudioSession.sharedInstance().setActive(true)
 
         } catch let err {
@@ -201,9 +207,12 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
             fatalError()
         }
 
-        let silencer = Fader(input, gain: 0)
-        self.silencer = silencer
-        mixer.addInput(silencer)
+
+        ////This silencer thing is for I think silencing the output for conversion
+        // let silencer = Fader(input, gain: 0)
+        // self.silencer = silencer
+        // mixer.addInput(silencer)
+
         mew = MeowFader(player)
         //mew.au.meow(sound: "baa wooof")
         // cat = mew.avAudioNode.auAudioUnit;
