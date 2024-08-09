@@ -3,7 +3,7 @@
 #include "DSPBase.h"
 #include "ParameterRamper.h"
 #include "signalsmith-stretch.h"
-#include "katherine-Swift.h"
+#include "katarina-Swift.h"
 
 
 enum MeowParameter : AUParameterAddress {

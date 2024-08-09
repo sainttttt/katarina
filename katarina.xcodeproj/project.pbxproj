@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		850EA1C42A82B0D000858A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8538BA212AEBFDE800B7C21B /* AudioKitEX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AudioKitEX; path = katherine/AudioKitEX; sourceTree = "<group>"; };
+		8538BA212AEBFDE800B7C21B /* AudioKitEX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AudioKitEX; path = katarina/AudioKitEX; sourceTree = "<group>"; };
 		853C7EAF2A846A9500A28111 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		853C7EB12A851E4100A28111 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		853C7EB32A851EA700A28111 /* TrackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRequest.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		85A346D22AE723CE00A4EB9D /* perf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = perf.h; sourceTree = "<group>"; };
 		85A346D32AE723CE00A4EB9D /* filters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filters.h; sourceTree = "<group>"; };
 		85A346D42AE723CE00A4EB9D /* signalsmith-stretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "signalsmith-stretch.h"; sourceTree = "<group>"; };
-		85B267262A816B9D0028FDD1 /* katherine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = katherine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B267262A816B9D0028FDD1 /* katarina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = katarina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B267292A816B9D0028FDD1 /* katherineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = katherineApp.swift; sourceTree = "<group>"; };
 		85B2672B2A816B9D0028FDD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B2672D2A816B9F0028FDD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			children = (
 				8538BA202AEBFDE800B7C21B /* Packages */,
 				853C7EB82A851FC800A28111 /* Persistence.swift */,
-				85B267282A816B9D0028FDD1 /* katherine */,
+				85B267282A816B9D0028FDD1 /* katarina */,
 				85B267272A816B9D0028FDD1 /* Products */,
 				853C7EB52A851F7700A28111 /* Frameworks */,
 			);
@@ -134,12 +134,12 @@
 		85B267272A816B9D0028FDD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85B267262A816B9D0028FDD1 /* katherine.app */,
+				85B267262A816B9D0028FDD1 /* katarina.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85B267282A816B9D0028FDD1 /* katherine */ = {
+		85B267282A816B9D0028FDD1 /* katarina */ = {
 			isa = PBXGroup;
 			children = (
 				85E6244D2AEBFF9A0036375C /* Fader.swift */,
@@ -156,7 +156,7 @@
 				85B2672D2A816B9F0028FDD1 /* Assets.xcassets */,
 				85B2672F2A816B9F0028FDD1 /* Preview Content */,
 			);
-			path = katherine;
+			path = katarina;
 			sourceTree = "<group>";
 		};
 		85B2672F2A816B9F0028FDD1 /* Preview Content */ = {
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85B267252A816B9D0028FDD1 /* katherine */ = {
+		85B267252A816B9D0028FDD1 /* katarina */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85B267342A816B9F0028FDD1 /* Build configuration list for PBXNativeTarget "katherine" */;
+			buildConfigurationList = 85B267342A816B9F0028FDD1 /* Build configuration list for PBXNativeTarget "katarina" */;
 			buildPhases = (
 				85B267222A816B9D0028FDD1 /* Sources */,
 				85B267232A816B9D0028FDD1 /* Frameworks */,
@@ -182,7 +182,7 @@
 			);
 			dependencies = (
 			);
-			name = katherine;
+			name = katarina;
 			packageProductDependencies = (
 				850EA1C22A81874100858A72 /* AudioKitUI */,
 				853C7EAC2A8468F800A28111 /* GRDBQuery */,
@@ -190,8 +190,8 @@
 				85E624492AEBFF220036375C /* AudioKitEX */,
 				858488612AF163A2001214EB /* AudioKit */,
 			);
-			productName = katherine;
-			productReference = 85B267262A816B9D0028FDD1 /* katherine.app */;
+			productName = katarina;
+			productReference = 85B267262A816B9D0028FDD1 /* katarina.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 85B267212A816B9D0028FDD1 /* Build configuration list for PBXProject "katherine" */;
+			buildConfigurationList = 85B267212A816B9D0028FDD1 /* Build configuration list for PBXProject "katarina" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,7 +228,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85B267252A816B9D0028FDD1 /* katherine */,
+				85B267252A816B9D0028FDD1 /* katarina */,
 			);
 		};
 /* End PBXProject section */
@@ -404,11 +404,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"katherine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"katarina/Preview Content\"";
 				DEVELOPMENT_TEAM = C8XWX9329P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = katherine/Info.plist;
+				INFOPLIST_FILE = katarina/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -439,11 +439,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"katherine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"katarina/Preview Content\"";
 				DEVELOPMENT_TEAM = C8XWX9329P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = katherine/Info.plist;
+				INFOPLIST_FILE = katarina/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -469,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85B267212A816B9D0028FDD1 /* Build configuration list for PBXProject "katherine" */ = {
+		85B267212A816B9D0028FDD1 /* Build configuration list for PBXProject "katarina" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85B267322A816B9F0028FDD1 /* Debug */,
@@ -478,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85B267342A816B9F0028FDD1 /* Build configuration list for PBXNativeTarget "katherine" */ = {
+		85B267342A816B9F0028FDD1 /* Build configuration list for PBXNativeTarget "katarina" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85B267352A816B9F0028FDD1 /* Debug */,
