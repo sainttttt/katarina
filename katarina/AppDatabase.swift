@@ -11,7 +11,7 @@ struct AppDatabase {
         self.dbWriter = dbWriter
         try migrator.migrate(dbWriter)
     }
-    
+
     /// Provides access to the database.
     ///
     /// Application can use a `DatabasePool`, while SwiftUI previews and tests
@@ -19,19 +19,19 @@ struct AppDatabase {
     ///
     /// See <https://swiftpackageindex.com/groue/grdb.swift/documentation/grdb/databaseconnections>
     private let dbWriter: any DatabaseWriter
-    
+
     /// The DatabaseMigrator that defines the database schema.
     ///
     /// See <https://swiftpackageindex.com/groue/grdb.swift/documentation/grdb/migrations>
     private var migrator: DatabaseMigrator {
         var migrator = DatabaseMigrator()
-        
+
         #if DEBUG
         // Speed up development by nuking the database when migrations change
         // See <https://swiftpackageindex.com/groue/grdb.swift/documentation/grdb/migrations>
         migrator.eraseDatabaseOnSchemaChange = true
         #endif
-        
+
         migrator.registerMigration("createLine") { db in
             // Create a table
             // See <https://swiftpackageindex.com/groue/grdb.swift/documentation/grdb/databaseschema>
@@ -49,12 +49,12 @@ struct AppDatabase {
             }
         }
 
-        
+
         // Migrations for future application versions will be inserted here:
         // migrator.registerMigration(...) { db in
         //     ...
         // }
-        
+
         return migrator
     }
 }
@@ -107,9 +107,9 @@ extension AppDatabase {
     //             if (newPos < oldPos) {
 
     //         try db.execute(sql: """
-    //                        UPDATE Ribbon 
-    //                        SET pos = 
-    //                        CASE 
+    //                        UPDATE Ribbon
+    //                        SET pos =
+    //                        CASE
     //                        WHEN pos = ? THEN ?
     //                        ELSE
     //                        pos + 1
@@ -121,9 +121,9 @@ extension AppDatabase {
     //             print("DIFFFFF")
 
     //         try db.execute(sql: """
-    //                        UPDATE Ribbon 
-    //                        SET pos = 
-    //                        CASE 
+    //                        UPDATE Ribbon
+    //                        SET pos =
+    //                        CASE
     //                        WHEN pos = ? THEN ?
     //                        ELSE
     //                        pos - 1
@@ -134,7 +134,7 @@ extension AppDatabase {
     //         }
 
     //         // try db.execute(sql: """
-    //         //                UPDATE Ribbon 
+    //         //                UPDATE Ribbon
     //         //                SET pos = ?
     //         //                WHERE (id = ?)
     //         //                """, arguments: [newPos, ribbon.id!])
@@ -178,18 +178,25 @@ extension AppDatabase {
     func loadTrack(_ fileURL: URL) async throws {
         print("creating track with URL \(fileURL.path)")
 
-        let pathComponents = fileURL.deletingPathExtension().pathComponents.suffix(2)
+        // let pathComponents = fileURL.pathComponents.suffix(1)
+        let pathComponents = fileURL.deletingPathExtension().pathComponents.suffix(1)
         let filename = (pathComponents.joined(separator: "/"))
 
         do {
+
             try await dbWriter.write { db in
+
+            try db.execute(sql: """
+                           DELETE from track
+                           """ )
+
                 try db.execute(sql: """
             INSERT INTO track(fileURL, filename) VALUES (?, ?)
 
-            ON CONFLICT (filename) DO 
+            ON CONFLICT (filename) DO
             UPDATE SET fileURL=excluded.fileURL
         """, arguments:[fileURL.path, filename])
-            } 
+            }
         }  catch {
             print("caught error:\(error)")
         }
@@ -203,7 +210,6 @@ extension AppDatabase {
     //         try scrollState.update(db)
     //     }
     // }
-
     // func importJson(_ filename: String, _ db: Database) throws {
     //     let importJson : JsonImport = load(filename)
 
