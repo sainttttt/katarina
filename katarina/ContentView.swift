@@ -39,7 +39,6 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
     var previousFile: URL?
     var xa:  UnsafeMutablePointer<UnsafeMutablePointer<Float>?>?
 
-
     @Published var playerData = PlayerData() {
         didSet {
             if true {
@@ -60,50 +59,24 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
                         newFile2 = try AVAudioFile(forReading: playerData.fileToPlay!)
                         newFile = try AVAudioFile(forReading: playerData.fileToPlay!)
 
-                        //var floats = newFile.toFloatChannelData()
-
-
                         let pcmbuffer = newFile!.toAVAudioPCMBuffer()!
                         guard let pcm = pcmbuffer.floatChannelData else {
                             return
                         }
 
-                        print("woof dd first \(pcm[1][111231])")
-
-                        print("woof Starting")
-
                         var x0: UnsafeMutablePointer<Float>?
                         var x1: UnsafeMutablePointer<Float>?
                         x0 = UnsafeMutablePointer<Float>.init(mutating:pcm[0])
                         x1 = UnsafeMutablePointer<Float>.init(mutating:pcm[1])
-
                         var xx = [x0, x1]
-
                         xa =  UnsafeMutablePointer<UnsafeMutablePointer<Float>?>.allocate(capacity: 2)
                         xa!.initialize(from: &xx, count: 2)
-
-                        print("woof dd \(xx[0]![34])")
-
                         let frameLength = Int(pcmbuffer.frameLength)
-                        mew.au.meow(sound: "baa 2222 wooof", floats: xa!, frameLength: frameLength)
 
+                        mew.au.load(sound: "baa 2222 wooof", floats: xa!, frameLength: frameLength)
 
                         let channelCount = 2
                         let stride = pcmbuffer.stride
-
-                        // // Preallocate our Array so we're not constantly thrashing while resizing as we append.
-                        // var result = Array(repeating: [Float](zeros: frameLength), count: channelCount)
-
-                        // for channel in 0 ..< channelCount {
-                        //     // Make sure we go through all of the frames...
-                        //     for sampleIndex in 0 ..< frameLength {
-                        //         result[channel][sampleIndex] = pcm[channel][sampleIndex * stride]
-                        //     }
-                        // }
-
-
-                        // print("woof \(result[1][2])")
-
 
                         var options = FormatConverter.Options()
                         options.format = AudioFileFormat(rawValue: "m4a")
@@ -129,7 +102,7 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
                         print(newFile)
                         // settings[AVFormatIDKey] = kAudioFormatMPEG4AAC
                         // settings[AVLinearPCMIsNonInterleaved] = NSNumber(value: false)
-                        player.file = newFile2
+                        // player.file = newFile2
                         // mew.setFile(
                     }
                 } catch {
@@ -140,7 +113,7 @@ class RecorderConductor: ObservableObject, HasAudioEngine {
                     // self.playerData.fileToPlay = nil
                     self.isPlaying = false
                 }
-                player.play()
+                // player.play()
                 isPlaying = true
                 // }
             }
@@ -285,6 +258,10 @@ private struct TrackView: View {
     }
     var body: some View {
         Text(track.filename)
+        .font(Font.custom("PixGamer-Regular", size: CGFloat(30)))
+
+        Text("cat-dog_woof2.wav")
+        .font(Font.custom("SegaSaturnBIOS", size: CGFloat(30)))
     }
 }
 

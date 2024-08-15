@@ -26,6 +26,11 @@
 		853C7EB42A851EA700A28111 /* TrackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C7EB32A851EA700A28111 /* TrackRequest.swift */; };
 		853C7EB72A851F7700A28111 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 853C7EB62A851F7700A28111 /* GRDB */; };
 		853C7EB92A851FC800A28111 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C7EB82A851FC800A28111 /* Persistence.swift */; };
+		854695212C6E425800530B8D /* PixgamerRegular-OVD6A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 854695202C6E425800530B8D /* PixgamerRegular-OVD6A.ttf */; };
+		854695262C6E637E00530B8D /* pixelserrat.otf in Resources */ = {isa = PBXBuildFile; fileRef = 854695222C6E637D00530B8D /* pixelserrat.otf */; };
+		854695272C6E637E00530B8D /* machine-coded.otf in Resources */ = {isa = PBXBuildFile; fileRef = 854695232C6E637E00530B8D /* machine-coded.otf */; };
+		854695282C6E637E00530B8D /* us-bulletin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 854695242C6E637E00530B8D /* us-bulletin.otf */; };
+		8546952B2C6E66B000530B8D /* sega-saturn-bios.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8546952A2C6E66B000530B8D /* sega-saturn-bios.ttf */; };
 		858488622AF163A2001214EB /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 858488612AF163A2001214EB /* AudioKit */; };
 		85A346D52AE723CE00A4EB9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 85A346CB2AE723CE00A4EB9D /* README.md */; };
 		85A346D62AE723CE00A4EB9D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 85A346D02AE723CE00A4EB9D /* LICENSE.txt */; };
@@ -45,6 +50,11 @@
 		853C7EB12A851E4100A28111 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		853C7EB32A851EA700A28111 /* TrackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRequest.swift; sourceTree = "<group>"; };
 		853C7EB82A851FC800A28111 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		854695202C6E425800530B8D /* PixgamerRegular-OVD6A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PixgamerRegular-OVD6A.ttf"; sourceTree = "<group>"; };
+		854695222C6E637D00530B8D /* pixelserrat.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pixelserrat.otf; sourceTree = "<group>"; };
+		854695232C6E637E00530B8D /* machine-coded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "machine-coded.otf"; sourceTree = "<group>"; };
+		854695242C6E637E00530B8D /* us-bulletin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "us-bulletin.otf"; sourceTree = "<group>"; };
+		8546952A2C6E66B000530B8D /* sega-saturn-bios.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sega-saturn-bios.ttf"; sourceTree = "<group>"; };
 		858488602AF16395001214EB /* AudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AudioKit; path = ../AudioKit; sourceTree = "<group>"; };
 		85A346C12AE70F9400A4EB9D /* Fader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
 		85A346C82AE723CE00A4EB9D /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fft.h; sourceTree = "<group>"; };
@@ -101,6 +111,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8546951F2C6E402100530B8D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				854695232C6E637E00530B8D /* machine-coded.otf */,
+				854695222C6E637D00530B8D /* pixelserrat.otf */,
+				8546952A2C6E66B000530B8D /* sega-saturn-bios.ttf */,
+				854695242C6E637E00530B8D /* us-bulletin.otf */,
+				854695202C6E425800530B8D /* PixgamerRegular-OVD6A.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		85A346C72AE723CE00A4EB9D /* dsp */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +164,7 @@
 		85B267282A816B9D0028FDD1 /* katarina */ = {
 			isa = PBXGroup;
 			children = (
+				8546951F2C6E402100530B8D /* Fonts */,
 				85E6244D2AEBFF9A0036375C /* Fader.swift */,
 				85E6244B2AEBFF4D0036375C /* MeowDSP.mm */,
 				85A346C12AE70F9400A4EB9D /* Fader.swift */,
@@ -239,9 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				85A346D62AE723CE00A4EB9D /* LICENSE.txt in Resources */,
+				854695262C6E637E00530B8D /* pixelserrat.otf in Resources */,
+				854695282C6E637E00530B8D /* us-bulletin.otf in Resources */,
 				85A346D52AE723CE00A4EB9D /* README.md in Resources */,
+				854695212C6E425800530B8D /* PixgamerRegular-OVD6A.ttf in Resources */,
 				85B267312A816B9F0028FDD1 /* Preview Assets.xcassets in Resources */,
 				85B2672E2A816B9F0028FDD1 /* Assets.xcassets in Resources */,
+				854695272C6E637E00530B8D /* machine-coded.otf in Resources */,
+				8546952B2C6E66B000530B8D /* sega-saturn-bios.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

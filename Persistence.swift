@@ -1,11 +1,10 @@
 import GRDB
 import Foundation
 
-
 extension AppDatabase {
     /// The database for the application
     static let shared = makeShared()
-    
+
     private static func makeShared() -> AppDatabase {
         do {
             // Pick a folder for storing the SQLite database, as well as
@@ -20,18 +19,18 @@ extension AppDatabase {
             if CommandLine.arguments.contains("-reset") {
                 try? fileManager.removeItem(at: folderURL)
             }
-            
+
             // Create the database folder if needed
             try fileManager.createDirectory(at: folderURL, withIntermediateDirectories: true)
-            
+
             // Connect to a database on disk
             // See https://swiftpackageindex.com/groue/grdb.swift/documentation/grdb/databaseconnections
             let dbURL = folderURL.appendingPathComponent("db.sqlite")
             let dbPool = try DatabasePool(path: dbURL.path)
-            
+
             // Create the AppDatabase
             let appDatabase = try AppDatabase(dbPool)
-            
+
             // // Prepare the database with test fixtures if requested
             // if CommandLine.arguments.contains("-fixedTestData") {
             //     try appDatabase.createPlayersForUITests()
@@ -42,7 +41,7 @@ extension AppDatabase {
             // }
             // try appDatabase.initDatabase()
 
-            
+
             return appDatabase
         } catch {
             // Replace this implementation with code to handle the error appropriately.
@@ -57,7 +56,7 @@ extension AppDatabase {
             fatalError("Unresolved error \(error)")
         }
     }
-    
+
     /// Creates an empty database for SwiftUI previews
     static func empty() -> AppDatabase {
         // Connect to an in-memory database
@@ -65,7 +64,7 @@ extension AppDatabase {
         let dbQueue = try! DatabaseQueue()
         return try! AppDatabase(dbQueue)
     }
-    
+
     /// Creates a database full of random players for SwiftUI previews
    static func random() -> AppDatabase {
        let appDatabase = empty()
